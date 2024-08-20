@@ -18,8 +18,8 @@ public class ProductService {
        return productRepo.findAll();
     }
 
-    public Product getProductById(String id){
-        Optional<Product> byId = productRepo.findById(id);
+    public Product getProductById(Integer id){
+        Optional<Product> byId = productRepo.findById(String.valueOf(id));
         return byId.get();
     }
 

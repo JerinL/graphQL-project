@@ -28,7 +28,7 @@ public class GraphQLApplication {
 				new Product(5, "Desk Lamp", "Furniture", "50","100"),
 				new Product(6, "Water Bottle", "Accessories", "50","100")
 		).collect(Collectors.toList());
-		pr.saveAll(products);
+		//pr.saveAll(products);
 	}
 
 	public static void main(String[] args) {

@@ -1,5 +1,5 @@
 type Product{
-    id: String,
+    id: ID,
     name: String,
     category: String,
     prize: String,
@@ -8,4 +8,5 @@ type Product{
 
 type Query{
     getAllProduct: [Product]
+    getProductById(id:ID):[Product]
 }
