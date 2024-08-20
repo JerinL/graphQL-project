@@ -23,7 +23,7 @@ public class ProductController {
     }
 
     @QueryMapping
-    public List<Product> getProductById(@Argument String ){
+    public List<Product> getProductById(@Argument String category ){
         return ps.getAllProduct();
     }
 
