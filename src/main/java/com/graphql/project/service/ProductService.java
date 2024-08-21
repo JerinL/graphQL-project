@@ -1,6 +1,7 @@
 package com.graphql.project.service;
 
 import com.graphql.project.entity.Product;
+import com.graphql.project.exception.CustomException;
 import com.graphql.project.repo.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +20,7 @@ public class ProductService {
     }
 
     public Product getProductById(Integer id){
-        Optional<Product> byId = productRepo.findById(String.valueOf(id));
-        return byId.get();
+        return productRepo.findById(String.valueOf(id)).orElseThrow(() -> new CustomException("Product with "+id+" not found"));
     }
 
 }

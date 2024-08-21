@@ -9,6 +9,7 @@ import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -26,6 +27,11 @@ public class ProductController {
     public Product getProductById(@Argument Integer id ){
         return ps.getProductById(id);
     }
+
+//    @QueryMapping
+//    public List<Product> getProductById(@Argument Integer id) {
+//        return Collections.singletonList(ps.getProductById(id));
+//    }
 
 
 }
