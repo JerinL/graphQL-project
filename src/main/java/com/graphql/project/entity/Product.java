@@ -20,18 +20,20 @@ public class Product {
     private Integer id;
     private String name;
     private String category;
-    private String prize;
-    private String stock;
+    private float prize;
+    private int stock;
+    private int quantity;
     private Date createdOn;
     private Date updatedOn;
     private String createdBy;
     private String updatedBy;
 
-    public Product(Integer id, String name, String category, String prize, String stock) {
+    public Product(Integer id, String name, String category, float prize, int stock,int quantity) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.prize = prize;
         this.stock = stock;
+        this.quantity= quantity;
     }
 }

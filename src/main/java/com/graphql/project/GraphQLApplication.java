@@ -21,14 +21,14 @@ public class GraphQLApplication {
 	@PostConstruct
 	public void initDB(){
 		List<Product> products = Stream.of(
-				new Product(1, "Laptop", "Electronics", "50","100"),
-				new Product(2, "Smartphone", "Electronics", "50","100"),
-				new Product(3, "Office Chair", "Furniture", "50","100"),
-				new Product(4, "Notebook", "Stationery", "50","100"),
-				new Product(5, "Desk Lamp", "Furniture", "50","100"),
-				new Product(6, "Water Bottle", "Accessories", "50","100")
+				new Product(1, "Laptop", "Electronics", 50,100,100),
+				new Product(2, "Smartphone", "Electronics", 60,7346,7346),
+				new Product(3, "Office Chair", "Furniture", 60,100,100),
+				new Product(4, "Notebook", "Stationery", 70,100,100),
+				new Product(5, "Desk Lamp", "Furniture", 80,100,100),
+				new Product(6, "Water Bottle", "Accessories", 30,100,100)
 		).collect(Collectors.toList());
-		//pr.saveAll(products);
+//		pr.saveAll(products);
 	}
 
 	public static void main(String[] args) {

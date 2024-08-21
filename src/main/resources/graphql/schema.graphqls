@@ -2,11 +2,18 @@ type Product{
     id: ID,
     name: String,
     category: String,
-    prize: String,
-    stock: String
+    prize: Float,
+    stock: Int
+    quantity: Int
 }
 
 type Query{
     getAllProduct: [Product]
+    getProductByCategory(category:String):[Product]
     getProductById(id:ID):Product
+
+}
+
+type Mutation{
+    getProductByIdd(id:ID,stock:Int):String
 }

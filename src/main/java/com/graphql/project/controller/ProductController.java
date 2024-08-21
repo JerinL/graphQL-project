@@ -5,6 +5,7 @@ import com.graphql.project.service.ProductService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -28,10 +29,15 @@ public class ProductController {
         return ps.getProductById(id);
     }
 
-//    @QueryMapping
-//    public List<Product> getProductById(@Argument Integer id) {
-//        return Collections.singletonList(ps.getProductById(id));
-//    }
+    @QueryMapping
+    public List<Product> getProductByCategory(@Argument String category) {
+        return ps.getProductByCategory(category);
+    }
+
+    @MutationMapping
+    public String getProductByIdd(@Argument Integer id ,@Argument int stock ){
+        return ps.updateProductStock(id,stock);
+    }
 
 
 }
